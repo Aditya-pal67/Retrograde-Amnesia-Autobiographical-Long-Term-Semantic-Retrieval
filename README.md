@@ -1,1 +1,1 @@
-# Retrograde-Amnesia-Autobiographical-Long-Term-Semantic-Retrieval
+To create simple terminal based games for supporting memory, identity, and daily orientation.
