@@ -1,0 +1,188 @@
+#include <stdio.h>
+
+void showHeader()
+{
+    printf("\n==================================================\n");
+    printf("                  DAILY ANCHOR\n");
+    printf("==================================================\n");
+}
+
+int main()
+{
+    char name[50];
+    int answer;
+    int score;
+    char playAgain;
+
+    do
+    {
+        score = 0;
+
+        showHeader();
+
+        printf("\nWelcome to Daily Anchor!\n");
+        printf("This game helps you practice everyday orientation.\n");
+
+        printf("\nEnter your name: ");
+        scanf(" %[^\n]", name);
+
+        printf("\nHello, %s!\n", name);
+        printf("Let's begin today's orientation check.\n");
+
+        /* QUESTION 1 */
+
+        printf("\n--------------------------------------------------\n");
+        printf("QUESTION 1 / 5\n");
+        printf("What day comes after Monday?\n\n");
+
+        printf("1. Sunday\n");
+        printf("2. Tuesday\n");
+        printf("3. Thursday\n");
+        printf("4. Saturday\n");
+
+        printf("\nYour answer: ");
+        scanf("%d", &answer);
+
+        if(answer == 2)
+        {
+            printf("\nCorrect! +10 points\n");
+            score += 10;
+        }
+        else
+        {
+            printf("\nNot quite. The correct answer is Tuesday.\n");
+        }
+
+        /* QUESTION 2 */
+
+        printf("\n--------------------------------------------------\n");
+        printf("QUESTION 2 / 5\n");
+        printf("How many days are there in one week?\n\n");
+
+        printf("1. 5\n");
+        printf("2. 6\n");
+        printf("3. 7\n");
+        printf("4. 8\n");
+
+        printf("\nYour answer: ");
+        scanf("%d", &answer);
+
+        if(answer == 3)
+        {
+            printf("\nCorrect! +10 points\n");
+            score += 10;
+        }
+        else
+        {
+            printf("\nNot quite. There are 7 days.\n");
+        }
+
+        /* QUESTION 3 */
+
+        printf("\n--------------------------------------------------\n");
+        printf("QUESTION 3 / 5\n");
+        printf("Which activity is commonly done in the morning?\n\n");
+
+        printf("1. Breakfast\n");
+        printf("2. Going to bed\n");
+        printf("3. Sleeping at night\n");
+        printf("4. Midnight snack\n");
+
+        printf("\nYour answer: ");
+        scanf("%d", &answer);
+
+        if(answer == 1)
+        {
+            printf("\nCorrect! +10 points\n");
+            score += 10;
+        }
+        else
+        {
+            printf("\nNot quite. Breakfast is commonly a morning activity.\n");
+        }
+
+        /* QUESTION 4 */
+
+        printf("\n--------------------------------------------------\n");
+        printf("QUESTION 4 / 5\n");
+        printf("What usually comes after lunch?\n\n");
+
+        printf("1. Breakfast\n");
+        printf("2. Dinner\n");
+        printf("3. Waking up\n");
+        printf("4. Morning exercise\n");
+
+        printf("\nYour answer: ");
+        scanf("%d", &answer);
+
+        if(answer == 2)
+        {
+            printf("\nCorrect! +10 points\n");
+            score += 10;
+        }
+        else
+        {
+            printf("\nNot quite. Dinner comes later in the day.\n");
+        }
+
+        /* QUESTION 5 */
+
+        printf("\n--------------------------------------------------\n");
+        printf("QUESTION 5 / 5\n");
+        printf("Which activity is normally associated with bedtime?\n\n");
+
+        printf("1. Going to bed\n");
+        printf("2. Having breakfast\n");
+        printf("3. Going to school\n");
+        printf("4. Having lunch\n");
+
+        printf("\nYour answer: ");
+        scanf("%d", &answer);
+
+        if(answer == 1)
+        {
+            printf("\nCorrect! +10 points\n");
+            score += 10;
+        }
+        else
+        {
+            printf("\nNot quite. Going to bed is associated with bedtime.\n");
+        }
+
+        /* FINAL RESULT */
+
+        printf("\n==================================================\n");
+        printf("                   DAILY RESULT\n");
+        printf("==================================================\n");
+
+        printf("\nPlayer: %s\n", name);
+        printf("Final Score: %d / 50\n", score);
+
+        if(score == 50)
+        {
+            printf("\nExcellent orientation!\n");
+            printf("You answered every question correctly.\n");
+        }
+        else if(score >= 30)
+        {
+            printf("\nGood work!\n");
+            printf("You showed good awareness of daily patterns.\n");
+        }
+        else
+        {
+            printf("\nKeep practicing!\n");
+            printf("Repeating familiar daily patterns can help build confidence.\n");
+        }
+
+        printf("\n==================================================\n");
+
+        printf("\nWould you like to play again? (Y/N): ");
+        scanf(" %c", &playAgain);
+
+    } while(playAgain == 'Y' || playAgain == 'y');
+
+    printf("\nThank you for playing Daily Anchor!\n");
+    printf("Goodbye!\n");
+
+    return 0;
+}
